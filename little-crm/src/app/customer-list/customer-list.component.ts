@@ -21,9 +21,18 @@ export class CustomerListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.get();
+  }
+
+  get() {
     this.customerService.getCustomers().subscribe((data) => {
       this.customers = data as Customer[];
     })
   }
 
+  delete(id: number) {
+    this.customerService.deleteCustomer(id).subscribe(() => {
+      this.get();
+    })
+  }
 }
