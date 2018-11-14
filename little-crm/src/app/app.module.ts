@@ -8,6 +8,8 @@ import { environment } from '../environments/environment';
 import { StartComponent } from './start/start.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { ImprintComponent } from './imprint/imprint.component';
+import {CustomerService} from './customer.service';
+import {HttpClientModule} from '@angular/common/http';
 
 // Decorator
 @NgModule({
@@ -23,9 +25,12 @@ import { ImprintComponent } from './imprint/imprint.component';
     // Module
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [
+    CustomerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
