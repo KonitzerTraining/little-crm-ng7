@@ -1,0 +1,25 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "credit": 2000
+    },
+    {
+      "id": 2,
+      "name": "json-server",
+      "credit": 0
+    },
+    {
+      "id": 3,
+      "name": "json-server",
+      "credit": 2000
+    },
+    {
+      "id": 4,
+      "name": "json-server",
+      "credit": 2000
+    }
+  ]
+
+}
